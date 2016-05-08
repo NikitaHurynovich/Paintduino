@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <title>Paintduino</title>
+
+    	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+        {% if (o.htmlWebpackPlugin.options.production) { %}
+            <link rel="stylesheet" href="app.{%=o.webpack.hash%}.css" media="all">
+        {% } %}
+    </head>
+    <body>
+        <div id="app"></div>
+
+        {% if (!o.htmlWebpackPlugin.options.production) { %}
+          <script src="http://localhost:5000/webpack-dev-server.js"></script>
+        {% } %}
+      
+        {% for (var chunk in o.htmlWebpackPlugin.files.chunks) { %}
+        <script src="{%=o.htmlWebpackPlugin.files.chunks[chunk].entry %}"></script>
+        {% } %}
+    </body>
+</html>

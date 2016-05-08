@@ -1,0 +1,14 @@
+
+.registration {
+    min-height: calc(100vh - 52px);
+    margin-top: -20px;
+    padding-top: 20px;
+}
+
+.registration--client {
+    background: #eee;	
+}
+
+.registration--supplier {
+    background: #bbb;	
+}

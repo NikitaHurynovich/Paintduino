@@ -1,0 +1,8 @@
+
+.login-form {
+	padding: 10px;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 5px;
+    border-radius: 0 0 5px 5px;
+}
